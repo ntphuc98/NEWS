@@ -10,10 +10,10 @@ class Category extends Model
 
     // relationships
     public function newCategories(){
-    	return $this->hasMany('App\NewCategory', 'category_id', 'id');
+    	return $this->hasMany('App\NewsCategory', 'category_id', 'id');
     }
 
     public function news(){
-    	return $this->hasManyThrough('App\News', 'App\NewCategory', 'category_id', 'new_category_id', 'id');
+    	return $this->hasManyThrough('App\News', 'App\NewsCategory', 'category_id', 'news_category_id', 'id');
     }
 }

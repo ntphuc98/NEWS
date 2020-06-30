@@ -9,7 +9,7 @@ class Comment extends Model
     protected $table = 'comments';
 
     public function news(){
-    	return $this->belongsTo('App\News', 'new_id', 'id');
+    	return $this->belongsTo('App\News', 'news_id', 'id');
     }
 
     public function user(){
